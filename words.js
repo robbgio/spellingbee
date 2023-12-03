@@ -1,4 +1,4 @@
-let origWords = ["sky",
+export const origWords = ["sky",
 "wow",
 "later",
 "river",

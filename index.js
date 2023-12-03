@@ -1,3 +1,5 @@
+import { origWords } from './words.js';
+import audioFile from "url:./sounds/flexatone-cartoon-wobble-ni-sound-1-00-02.mp3";
 
 const canvas = document.getElementById('main-canvas');
 const ctx = canvas.getContext('2d');
@@ -9,7 +11,7 @@ let balloonRadius = 30;
 let numberOfWords = 0;
 let words = origWords;
 //words = origWords;
-numberOfWords = words.length;
+numberOfWords = 0;
 let currentWordArray = words[0].split("");
 let currentWord = words[0];
 let currentTypedWord = [];
@@ -35,6 +37,9 @@ setStreakText();
 
 if (getWordsArray() !== null) words = storageWords;
 setCanvasBackground('white');
+
+numberOfWords = words.length;
+setWordsLeft();
 
 document.addEventListener('keydown', logKey);
 // addListenerToButton();
@@ -79,6 +84,7 @@ function newWord() {
         setWordsLeft();
 }
 function logKey(e) {
+    let typedLetter = "";
     const typedArray = e.code.split("");
     if (typedArray[0] === 'K') typedArray.splice(0, 3);
     if (isLetter(typedArray[0])){
@@ -104,6 +110,7 @@ function setTypedWordText(typedWord) {
 }
 
 function checkSpelling(typedLetter) {
+    if (document.activeElement.id === "startWord" || document.activeElement.id === "subsetWord") return;
     currentTypedWord.push(typedLetter);
     typedWordText = currentTypedWord.join('');
     setTypedWordText(typedWordText);
@@ -160,6 +167,8 @@ function checkSpelling(typedLetter) {
             typedWordText = '';
             setTypedWordText(typedWordText);
             setTimeout(function (){sayWord(currentWord)}, 1000);
+            clearCanvas();
+            setCanvasBackground('white');
             return false;
         }
         //second fail
@@ -184,8 +193,7 @@ function flashWord(currentWord) {
     setTimeout(function (){sayWord(currentWord)}, 1000);
 }
 function playSound() {
-    var audio = new Audio(
-'/sounds/flexatone-cartoon-wobble-ni-sound-1-00-02.mp3');
+    var audio = new Audio(audioFile);
     audio.play();
 }
 
@@ -277,3 +285,4 @@ function drawCircleText(coordinateArray){
     ctx.fillStyle = 'black';
     ctx.fillText(currentStreak, coordinateArray[0] - 10, coordinateArray[1] + 6);
 }
+
