@@ -396,4 +396,4 @@ export const origWords = ["sky",
 "simultaneously",
 "luciferin",
 "megaron",
-"orney"]
+"attorney"]
