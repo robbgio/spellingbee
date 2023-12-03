@@ -1,0 +1,95 @@
+body {
+  background: #e0d9d9;
+}
+
+#main-section {
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: repeat (4, 1fr);
+  scroll-behavior: hidden;
+  padding: 1rem;
+  display: grid;
+}
+
+#button-section {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+#button-section button {
+  background: #ff0;
+  border: 1px solid #000;
+  border-radius: 15px;
+  height: 2rem;
+  font-weight: 600;
+  box-shadow: 0 0 5px #000;
+}
+
+#hiddenInput {
+  width: 1px;
+}
+
+#words-left {
+  font-weight: 600;
+}
+
+#bee-section {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+#bee--pic {
+  width: 15vw;
+  margin: auto;
+  display: block;
+}
+
+#streak {
+  text-align: center;
+  padding-bottom: 1rem;
+  font-weight: 600;
+}
+
+#typed-word-section {
+  justify-content: center;
+  align-items: center;
+  min-height: 1rem;
+  display: flex;
+}
+
+#typed-word-box {
+  text-align: center;
+  min-width: 20rem;
+  max-width: 20rem;
+  min-height: 1rem;
+}
+
+#typed-word {
+  margin: 0;
+  font-weight: 600;
+}
+
+#canvas-section {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+#main-canvas {
+  border: 1px solid #000;
+  margin: auto;
+}
+
+#correct-section {
+  text-align: center;
+  max-height: 20rem;
+  font-weight: 600;
+  overflow: auto;
+}
+
+.no--margin {
+  margin: 0;
+}
+
+/*# sourceMappingURL=index.965f2a6f.css.map */
