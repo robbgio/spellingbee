@@ -1,0 +1,93 @@
+body {
+  background: rgb(224, 217, 217);
+}
+
+#main-section {
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: repeat (4, 1fr);
+  scroll-behavior: hidden;
+}
+
+#button-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#button-section button {
+  background: yellow;
+  border-radius: 15px;
+  border: 1px solid #000;
+  box-shadow: 0 0 5px #000;
+  height: 2rem;
+  font-weight: 600;
+}
+
+#hiddenInput {
+  width: 1px;
+}
+
+#words-left {
+  font-weight: 600;
+}
+
+#bee-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#bee--pic {
+  display: block;
+  width: 15vw;
+  margin: auto;
+}
+
+#streak {
+  padding-bottom: 1rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+#typed-word-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 1rem;
+}
+
+#typed-word-box {
+  max-width: 20rem;
+  min-width: 20rem;
+  min-height: 1rem;
+  text-align: center;
+}
+
+#typed-word {
+  margin: 0;
+  font-weight: 600;
+}
+
+#canvas-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#main-canvas {
+  margin: auto;
+  border: 1px solid black;
+}
+
+#correct-section {
+  text-align: center;
+  font-weight: 600;
+  overflow: auto;
+  max-height: 20rem;
+}
+
+.no--margin {
+  margin: 0;
+}
