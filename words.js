@@ -1,4 +1,4 @@
-"amiably",
+export const origWords = ["amiably",
 "amnesty",
 "amulet",
 "amusement",
@@ -362,7 +362,6 @@
 "glossary",
 "gnarled",
 "gnome",
-"Godspeed",
 "goober",
 "googly",
 "gossip",
@@ -713,7 +712,6 @@
 "seller",
 "semester",
 "sensory",
-"September",
 "sequel",
 "serenade",
 "service",
@@ -899,4 +897,4 @@
 "truffle",
 "truly",
 "truncate",
-"zither"
+"zither"]
