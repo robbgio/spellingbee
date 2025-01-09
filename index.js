@@ -80,7 +80,6 @@ function newWord() {
         currentWord = words[wordIndex];
         currentWordArray = words[wordIndex].split("");
         spellingWord=true;
-        flashWord(currentWord);
         setTimeout(function (){sayWord(currentWord)}, 2000);
         setWordsLeft();
 }
@@ -167,7 +166,6 @@ function checkSpelling(typedLetter) {
             currentTypedWord=[];
             typedWordText = '';
             setTypedWordText(typedWordText);
-            flashWord(currentWord);
             setTimeout(function (){sayWord(currentWord)}, 1000);
             clearCanvas();
             setCanvasBackground('white');
