@@ -245,6 +245,7 @@ function clearCorrectWords () {
 
 function clearStorage(){
     localStorage.removeItem("wordsArray");
+    saveHighStreak(0);
 }
 
 function getRandomCoordinates (){
