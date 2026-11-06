@@ -84,13 +84,10 @@ function newWord() {
         setWordsLeft();
 }
 function logKey(e) {
-    let typedLetter = "";
-    const typedArray = e.code.split("");
-    if (typedArray[0] === 'K') typedArray.splice(0, 3);
-    if (isLetter(typedArray[0])){
-        typedLetter = typedArray[0].toLowerCase();
-    }
-    checkSpelling(typedLetter);
+    // e.key is the actual character typed ("a", "-", "é"); ignore
+    // non-character keys like Shift, Enter, Tab, arrows, etc.
+    if (e.key.length !== 1 || e.metaKey || e.ctrlKey) return;
+    checkSpelling(e.key.toLowerCase());
 }
 
 function setWordsLeft(){
